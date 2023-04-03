@@ -1,17 +1,18 @@
-// Khai báo
-listProduct = [];
-$(function () {
-  loadComponentAdmin();
+$(document).ready(function () {
+  $("#add-new-product").click(function () {
+    // show modal to add new product
+  });
+
+  $("#edit-product-item_1").click(function () {
+    // show modal to edit product
+  });
+
+  $("#edit-product-item_2").click(function () {
+    // show modal to edit product
+  });
 });
-
-
-// Load các thành phần của trang Home Page
-function loadComponentAdmin(params) {
-  $(".MenuSection").load("./MenuAdmin.html");
-  $(".SideBarSection").load("./SideBarAdmin.html");
-  //   $(".ProductAdminSection").load("./ContentProductAdmin.html");
-}
-
+// Khai bá
+listProduct = [];
 
 // Xử lý khi click vào menu Product
 function handleShowProduct(params) {
@@ -26,21 +27,21 @@ function handleShowProduct(params) {
 // Xử lý khi click vào menu Manufacturer
 function handleShowManufacturer(params) {
   // Load nội dung ContentManufacturerAdmin
-  $(".ProductAdminSection").load("./ContentManufacturerAdmin.html", "data", function (response, status, request) {});
+  $(".ProductAdminSection").load("./ContentManufacturerAdmin.html", "data", function (response, status, request) { });
 }
 
 
 // Xử lý khi click vào menu Category
 function handleShowCategory(params) {
   // Load nội dung ContentCategoryAdmin
-  $(".ProductAdminSection").load("./ContentCategoryAdmin.html", "data", function (response, status, request) {});
+  $(".ProductAdminSection").load("./ContentCategoryAdmin.html", "data", function (response, status, request) { });
 }
 
 
 // Xử lý khi click vào menu Account
 function handleShowAccount(params) {
   // Load nội dung ContentAccountAdmin
-  $(".ProductAdminSection").load("./ContentAccountAdmin.html", "data", function (response, status, request) {});
+  $(".ProductAdminSection").load("./ContentAccountAdmin.html", "data", function (response, status, request) { });
 }
 
 
@@ -127,7 +128,6 @@ function fetchListProductAdmin(params) {
   }
 }
 
-
 // Hàm handleResetForm, xóa dữ liệu trong các ô Input
 function handleResetForm() {
   // Gọi lại các Form nhập liệu và reset giá trị
@@ -150,8 +150,5 @@ function getImageName(pathImage) {
   // Lấy phần tử cuối cùng
   var imageName = itemArray[itemArray.length - 1];
 
-
   return imageName;
 }
-
-
